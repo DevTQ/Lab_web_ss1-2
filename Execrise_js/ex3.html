@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function calculate factorial n</title>
+</head>
+<body>
+    <script>
+        // Viết hàm tính giai thừa của n
+        // c1: for loop
+        function factorial(n) {
+            fac = 1
+            for(var i = 1; i <= n; i++) {
+                fac *= i;
+            }
+            alert(n + '!' + ' = ' + fac)
+        }
+        
+        // c2: recursion
+        function Refactorial(n) {
+            if(n == 0) {
+                return 1
+            }
+            return n * Refactorial(n - 1)
+        }
+        var n = 5
+        fac = Refactorial(n)
+        alert(n + '!' + ' = ' + fac)
+    </script>
+</body>
+</html>

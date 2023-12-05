@@ -1,0 +1,26 @@
+<html>
+    <title></title>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<script>
+		function check(){
+			if (f.rdcheck[0].checked==true){
+				document.fgColor='white';
+				document.bgColor='black';
+			} else {
+				document.fgColor='black';
+				document.bgColor='white';
+			
+			}
+		}
+	</script>
+	<body>
+			<form name=f>
+				<input type=radio name=rdcheck value=1
+					onclick="check();">Turn on
+				<input type=radio name=rdcheck value=0
+					onclick="check();">Turn off
+			</form>
+	</body>
+</html>

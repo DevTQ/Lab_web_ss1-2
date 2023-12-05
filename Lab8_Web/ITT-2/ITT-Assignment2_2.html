@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ITT-Assignment2_2.css">
+    <script src="ITT-Assignment2_2.js"></script>
+    <title>Registration Form</title>
+</head>
+<body>
+    <form action="#" name="f">
+        <div class="container">
+            <h2 onmouseover="checkMouseOver()">Registration Form</h2>
+            <div class="Name">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" onchange="getName()" oninput="checkDisable()" onblur="checkOutInputDisable()">
+            </div>
+            <div class="Address">
+                <label for="address">Address</label>
+                <textarea name="address" id="address" cols="30" rows="3" disabled></textarea>
+            </div>
+            <div class="Company">
+                <label for="company">Company</label>
+                <input type="text" name="company" id="company" disabled>
+            </div>
+            <div class="Email">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" disabled>
+            </div>
+            <div class="Password">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" disabled>
+            </div>
+            <div class="Confirm-Password">
+                <label for="confirm-password">Confirm-Password</label>
+                <input type="password" name="confirm-password" id="confirm-password" disabled>
+            </div>
+            <div class="TelNumber">
+                <label for="telnumber">Tel Number</label>
+                <input type="text" name="telnumber" id="telnumber" disabled>
+            </div>
+            <div class="Age">
+                <label for="age">Age</label>
+                <select id="age" disabled>
+                    <option>15-25</option>
+                    <option>25-35</option>
+                    <option>35-45</option>
+                    <option>45-55</option>
+                    <option>55-65</option>
+                    <option>&gt;65</option>
+                </select>
+            </div>
+            <div class="radio">
+                <input type="radio" name="sex" id="male" value="male" onclick="selectGender()">Male
+                <input type="radio" name="sex" id="female" value="female" onclick="selectGender()">Female
+            </div>
+            <div class="button">
+                <button type="button" name="submit" onclick="checkSubmit()">Submit</button>
+                <button type="button" name="reset">Reset</button>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        var name = ''
+        function getName() {
+            name = document.getElementById('name').value;
+        }
+        function selectGender() {
+            var gender = document.querySelectorAll('input[type="radio"]');
+            for (var i = 0; i < gender.length; i++) {
+                if (gender[i].checked) {
+                    if (gender[i].value == 'male') {
+                        document.getElementById('name').value = 'Mr. ' + name;
+                    }
+                    else {
+                        document.getElementById('name').value = 'Mrs. ' + name;
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

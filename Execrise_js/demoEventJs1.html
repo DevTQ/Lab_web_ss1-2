@@ -1,0 +1,42 @@
+<html>
+	<title>Onclick</title>
+	<head>
+		<meta charset="utf-8">
+		<style type="text/css">
+			.width{
+				width:150px;
+			}
+		</style>
+	</head>
+	<body>
+			<form name=f>
+				<table border=0 align=center>
+					<tr><td>Enter the expression: </td>
+						<td><input type=text name=txtExp class=width>
+						</td>
+					</tr>
+				<tr><td colspan=2>
+				<input type=button  value="Calculate" 
+					onClick="calculate(f);">
+				</td></tr>
+				<tr>
+					<td>
+				Result: </td>
+					<td><input type=text name=txtResult class=width>
+					</td>
+				</tr>
+				</table>
+			</form>
+			<script language="javascript">
+				function calculate(form){
+					if (form.txtExp.value==""){
+						alert("Please input Exp!");
+						form.txtExp.focus();
+							
+					} else {
+						form.txtResult.value=eval(form.txtExp.value);
+					}
+				}
+			</script>
+	</body>
+</html>

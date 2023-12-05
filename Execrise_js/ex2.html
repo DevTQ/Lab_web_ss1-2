@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải hệ phương trình</title>
+</head>
+<body>
+    <script>
+        //Nhập vào a, b, c, a1, b1, c1. Giải hệ phương trình ax + by = c   a1x + b1y = c1
+        a = parseFloat(prompt('Nhập a = '))
+        b = parseFloat(prompt('Nhập b = '))
+        c = parseFloat(prompt('Nhập c = '))
+        a1 = parseFloat(prompt('Nhập a1 = '))
+        b1 = parseFloat(prompt('Nhập b1 = '))
+        c1 = parseFloat(prompt('Nhập c1 = '))
+        // sử dụng phương pháp cramer
+
+        D = a * b1 - a1 * b
+        Dx = c * b1 - c1 * b
+        Dy = a * c1 - a1 * c
+        if(D == 0) {
+            if(Dx + Dy == 0) {
+                alert('Hệ Phương trình có vô số nghiệm!')
+            }else {
+                alert('Hệ phương trình vô nghiệm!')
+            }
+        }else {
+            x = Dx / D
+            y = Dy / D
+            alert(`Hệ phương trình có ngiệm x = ${x} và y = ${y}`)
+        }
+        
+    </script>
+</body>
+</html>

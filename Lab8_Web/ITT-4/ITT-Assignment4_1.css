@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+}
+
+.Title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.Month {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.allDay-Month {
+    text-align: center;
+}
+
+th, td {
+    width: 60px;
+    height: 30px;
+}
+
+#year {
+    width: 100px;
+    font-size: 20px;
+}
+
+#month {
+    font-size: 20px;
+}
+
+.select-color {
+    margin-top: 50px;
+    background-color: yellow;
+    font-size: 20px;
+}
+
+.color-button {
+    margin-top: 50px;
+}
+
+#HotPink {
+    background-color: hotpink;
+}
+
+#Aqua {
+    background-color: aqua;
+}
+
+#Yellow {
+    background-color: yellow;
+}
+
+#Blue {
+    background-color: blue;
+}
+
+#Green {
+    background-color: green;
+}
+
+#Red {
+    background-color: red;
+}
+
+#Grey {
+    background-color: grey;
+}
+
+button {
+    width: 65px;
+    height: 25px;
+}

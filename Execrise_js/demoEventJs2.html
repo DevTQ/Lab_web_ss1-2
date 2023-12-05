@@ -1,0 +1,55 @@
+<html>
+    <title>onChange</title>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+			<form name=f>
+            Please input your name:
+            <input type="text" name="txtName" onchange="checkName(this.value);">
+                <br><br>
+			Please input your age:
+				<input type=text name=txtAge onChange="check(this.value);">
+				
+			</form>
+			<script language=javascript>
+				function check(num){
+					if (num=="") {
+						alert("Please input your age!");
+						return false;
+					} else if (isNaN(num)){
+						alert("Please input a number!");
+						return false;
+					} else {
+						if (num<15){
+							alert("You are Minor!");
+							return true;
+						} else {
+							alert(`you are ${num} year old.`);
+							return true;
+						}
+					}
+				
+				}
+                var myRe = /^[A-Z]/;
+                function checkName(name) {
+                    if (name == "") {
+                        alert("Please input your name!");
+                        return false;
+                    } else if (!isNaN(name)) {
+                        alert("Please input a string!");
+                        return false;
+                    } else {
+                        if (myRe.test(name)) {
+                        alert(`Name is your ${name}`);
+                        return true;
+                    } else {
+                        alert("Please capitalize the first letter!");
+                        return false;
+                    }
+                }
+            }
+
+			</script>
+	</body>
+</html>

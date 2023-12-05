@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="prac_HDJ4.css">
+    <script src="prac_HDJ4.js"></script>
+    <title>Banner area</title>
+</head>
+<body>
+    <form action="#" name="f" id="myForm">
+        <div class="banner-area">
+            <p>Banner area</p>
+        </div>
+        <div class="block-color">
+            <p>HN-Aptech <br> HN-Arena <br> Inpro</p>
+        </div>
+        <div class="select-button">
+            <input type="button" id="home" value="Home">
+            <input type="button" id="profile" value="Profile">
+            <input type="button" id="mission" value="Mission">
+            <input type="button" id="contact" value="Contact">
+        </div>
+        <div class="register-form">
+            <p>REGISTER FORM</p>
+        </div>
+        <div class="FullName">
+            <label for="fullname">Full name</label>
+            <input type="text" name="fullname" id="fullname" onfocus="txt_input_onfocus(this)" onblur="txt_input_onblur(this)">(*)
+        </div>
+        <div class="Address">
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address" onfocus="txt_input_onfocus(this)" onblur="txt_input_onblur(this)">(*)
+        </div>
+        <div class="Gender">
+            <label for="gender" id="gender">Gender</label>
+            <input type="radio" name="male" id="male">male <br>
+            <label for=""></label>
+            <input type="radio" name="female" id="female">female
+        </div>
+        <div class="Email">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" onfocus="txt_input_onfocus(this)" onblur="txt_input_onblur(this)">(*)
+        </div>
+        <div class="Hobbies">
+            <label for="hobbies">Hobbies</label>
+            <input type="checkbox" name="reading" id="reading">reading
+            <input type="checkbox" name="shopping" id="shopping">Shopping
+            <input type="checkbox" name="sport" id="sport">Sport
+            <input type="checkbox" name="travel" id="travel">Travel
+        </div>
+        <div class="Question">
+            <label for="question">Question</label>
+            <select name="question" id="question">
+                <option value="" disabled selected hidden>Choose at least question</option>
+                <option value="question1">Question1</option>
+                <option value="question2">Question2</option>
+                <option value="question3">Question3</option>
+            </select>(*)
+        </div>
+        <div class="Answer">
+            <label for="answer">Answer</label>
+            <input type="text" name="answer" id="answer" onfocus="txt_input_onfocus(this)" onblur="txt_input_onblur(this)">(*)
+        </div>
+        <div class="Infor">
+            <label for="infor" id="infor-label">Infor</label>
+            <textarea onfocus="txt_input_onfocus(this)" onblur="txt_input_onblur(this)" name="infor" id="infor" cols="30" rows="6"></textarea>(*)
+        </div>
+        <div class="Send-infor-checkbox">
+            <input type="checkbox" name="sendinfor" id="sendinfor" onclick="checkSend()">Send infor now
+        </div>
+        <div class="button">
+            <input type="button" value="Submit" id="submitform" disabled onclick="checkSubmit()">
+            <input type="button" value="Reset" onclick="checkReset()">
+        </div>
+    </form>
+</body>
+</html>

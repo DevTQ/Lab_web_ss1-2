@@ -1,0 +1,17 @@
+.head {
+    text-align: center;
+    font-size: 20px;
+    color: green;
+    margin-bottom: 20px;
+}
+
+.middle {
+    position: relative;
+}
+
+.below {
+    #btn {
+        position: relative;
+        left: 40px;
+    }
+}

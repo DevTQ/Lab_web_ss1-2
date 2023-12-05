@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ITT-Assignment1_2.css">
+    <script src="ITT-Assignment1_2.js"></script>
+    <title>Calculator</title>
+</head>
+<body>
+    <form action="#" name="f" onsubmit="return calculateResult();">
+        <div class="Contener">
+            <div class="input">
+                <label for="num1">1. Number</label> <label for="num2" id="labelnum2">2. Number</label><br>
+                <input type="text" name="num1" id="num1"> <input type="text" name="num2" id="num2">
+            </div>
+
+            <div class="Operator">
+                <input type="radio" name="operator" id="add" value="add"><label for="add">Add</label>
+                <input type="radio" name="operator" id="sub" value="sub"><label for="sub">Sub</label><br>
+                <input type="radio" name="operator" id="mul" value="mul"><label for="mul">Mul</label>
+                <input type="radio" name="operator" id="div" value="div"><label for="div">Div</label>
+            </div>
+
+            <div class="Result">
+                <button type="button" onclick="calculateResult()">Result</button>
+                <input type="number" name="result" id="result" readonly>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

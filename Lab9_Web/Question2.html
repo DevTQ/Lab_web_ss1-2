@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+
+        form {
+            width: 500px;
+            height: 520px;
+            border: 2px solid;
+        }
+
+        label {
+            text-align: center;
+            width: 140px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .Title {
+            position: relative;
+            left: 20px;
+            text-align: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+            height: 45px;
+            width: 450px;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            align-items: center;
+            text-align: center;
+        }
+
+        #description {
+            position: relative;
+            top: -30px;
+        }
+
+        #infor {
+            position: relative;
+            top: -30px;
+        }
+
+        hr {
+            width: 450px;
+            margin-bottom: 20px;
+        }
+
+        i {
+            color: red;
+        }
+
+
+    </style>
+    <form action="#" name="f" id="myForm">
+        <div class="Title" onmouseover="mouseover_Title()">
+            <p id="title">ADDNEW PRODUCTION</p>
+        </div>
+        <div class="Category-choose">
+            <label for="category">Category Choose:</label>
+            <select name="category" id="category">
+                <option value="select" disabled selected hidden>[Select]</option>
+                <option value="nokia">Nokia</option>
+                <option value="samsung">Samsung</option>
+                <option value="gl">GL</option>
+                <option value="sony">Sony</option>
+            </select>
+        </div>
+        <div class="Product-Name">
+            <label for="productname">Product Name:</label>
+            <input type="text" name="productname" id="product-name" onfocus="input_txt_Onfocus(this)" onblur="input_txt_Onblur(this)">
+        </div>
+        <div class="Product-Description">
+            <label id="description" for="product-description">Product Description:</label>
+            <textarea name="product-description" id="product-description" cols="40" rows="4" onfocus="input_txt_Onfocus(this)" onblur="input_txt_Onblur(this)"></textarea>
+        </div>
+        <div class="Product-Quantity">
+            <label for="product-quantity">Product Quantity:</label>
+            <input type="text" name="product-quantity" id="product-quantity" onfocus="input_txt_Onfocus(this)" onblur="input_txt_Onblur(this)"> <i>(positive)</i>
+        </div>
+        <div class="Product-Price">
+            <label for="product-price">Product-Price:</label>
+            <input type="text" name="product-price" id="product-price" onfocus="input_txt_Onfocus(this)" onblur="input_txt_Onblur(this)"> <i>($)</i>
+        </div>
+        <div class="Product-Image">
+            <label for="product-image">Product-Image:</label>
+            <input type="text" name="product-image" id="product-image" onfocus="input_txt_Onfocus(this)" onblur="input_txt_Onblur(this)">
+            <input type="button" value="Browse...">
+        </div>
+        <div class="Product-Infor">
+            <label id="infor" for="product-infor">Product Infor:</label>
+            <textarea name="product-infor" id="product-infor" placeholder="Enter your Product Infor..." cols="40" rows="4" onfocus="input_txt_Onfocus(this)" onblur="input_txt_Onblur(this)"></textarea>
+        </div>
+        <div class="Product-Status">
+            <label for="product-status">Product Status:</label>
+            <input type="checkbox" name="show" id="show" onchange="displayStatus()">Show
+            <input type="checkbox" name="hidden" id="hidden" onchange="displayStatus()">Hidden
+        </div>
+        <hr>
+        <div class="button">
+            <input type="button" id="addnew" value="Addnew" onclick="checkSubmit()">
+            <input type="button" id="addnew" value="Reset" onclick="checkReset()">
+        </div>
+    </form>
+    <script>
+        function checkReset() {
+            document.getElementById('myForm').reset();
+        }
+
+        function mouseover_Title() {
+            var mouseover_title = document.getElementById('title');
+            mouseover_title.addEventListener('mouseover', function() {
+                mouseover_title.style.color = 'red';
+            });
+
+            mouseover_title.addEventListener('mouseout', function() {
+                mouseover_title.style.color = '';
+            });
+        }
+
+        function input_txt_Onfocus(txt) {
+            txt.style.backgroundColor = 'black';
+            txt.style.color = 'white';
+        }
+
+        function input_txt_Onblur(txt) {
+            txt.style.backgroundColor = '';
+            txt.style.color = '';
+        }
+
+        function displayStatus() {
+            var showCheckbox = document.getElementById('show');
+            var hiddenCheckbox = document.getElementById('hidden');
+    
+        }
+
+        function checkSubmit() {
+            var category = document.getElementById('category');
+            if(category.selectedIndex === 0) {
+                alert('You must choose one option!');
+                return false;
+            }
+
+            var product_Name = document.getElementById('product-name').value;
+            if(product_Name == '') {
+                alert('Product Name not empty!');
+                return false;
+            }
+
+            var regexProduct_Name = /^[a-zA-Z0-9\-_]+$/;
+            if(!regexProduct_Name.test(product_Name)) {
+                alert('Product Name can not be format!');
+                return false;
+            }
+
+            var Product_Quantity = document.getElementById('product-quantity').value;
+            if(Product_Quantity == '') {
+                alert('Product Quantity not empty!');
+                return false;
+            }else {
+                if(Product_Quantity < 0) {
+                    alert('Product Quantity must be positive!');
+                    return false;
+                }
+                if(Product_Quantity > 100) {
+                    alert('Product Quantity is value ranges from [1-100]!');
+                    return false;
+                }
+            }
+
+            var Product_Price = document.getElementById('product-price').value;
+            if(Product_Price == '') {
+                alert('Product Price not empty!');
+                return false;
+            }else {
+                if(isNaN(Product_Price)) {
+                    alert('Product Price must be the number!');
+                    return false;
+                }
+
+                if(Product_Price < 0) {
+                    alert('Product Price greater than 0!');
+                    return false;
+                }
+            }
+
+            var Product_Description = document.getElementById('product-description').value;
+            if(Product_Description == '') {
+                alert('Product Description not empty!');
+                return false;
+            }else {
+                if(Product_Description.length > 200) {
+                    alert('Product Description not exceed 200 characters!');
+                    return false;
+                }
+            }
+            var categoryName = category.options[category.selectedIndex].text;
+            
+            alert('Message addnew production: \n Product: ' + product_Name + ' of category ' + categoryName + ' has added to the database. \n'
+                + '- Quantity   :' + Product_Quantity + '\n' + '- Price   :' + Product_Price + '$'+ '\n' + '* The total money    :' + Product_Quantity * Product_Price + '$');
+        }   
+    </script>
+</body>
+</html>

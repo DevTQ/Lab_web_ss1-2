@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function calculate Fibonaci</title>
+</head>
+<body>
+    <script>
+        // c1: using for loop
+        function fibonaci(n) {
+            var f0 = 0
+            var f1 = 1
+            var fn = 1
+            var i
+            if(n <= 2) {
+                return n
+            }else {
+                for(var i = 2; i < n; i++) {
+                    f0 = f1
+                    f1 = fn
+                    fn = f0 + f1
+                }
+            }
+            return fn
+        }
+        var n = 10
+        fi = fibonaci(n)
+        alert(`Số Fibonaci với n = ${n} bằng ${fi}`)
+
+        // using recursion
+        function Fibonaci(n) {
+            if(n <= 2) return 1
+            return Fibonaci(n - 1) + Fibonaci(n - 2)
+        }
+        var n = 10
+        Fi = Fibonaci(n)
+        alert(`Số Fibonaci với n = ${n} bằng ${Fi}`)
+    </script>
+</body>
+</html>

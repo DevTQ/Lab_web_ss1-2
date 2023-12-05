@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ITT-Assignment3_1.css">
+    <script src="ITT-Assignment3_1.js"></script>
+    <title>Phiếu đăng ký tham dự hội thảo</title>
+</head>
+<body>
+    <form action="#" name="f">
+        <div class="main">
+            <div class="title-block-top-color"></div>
+            <div class="block-top-color"></div>
+            <div class="title">
+                <p class="highlight" id="title-top">Trung tâm đào tạo <br> Lập trình viên <br> Quốc tế HN - <br> Aptech</p>
+                <h1 class="highlight">HN-Aptech</h1>
+            </div>
+            
+            <div class="Input">
+                <h2 class="highlight">Phiếu đăng kí tham dự hội thảo</h2>
+                <fieldset>
+                    <legend class="highlight">Thông tin cá nhân</legend>
+                    <label for="ten" class="highlight">Tên</label>
+                    <input type="text" name="ten" id="ten"><br><br>
+                    <label for="mahocvien" class="highlight">Mã học viên</label>
+                    <input type="text" name="mahocvien" id="mahocvien"><br><br>
+                    <label for="lop" class="highlight">Lớp</label>
+                    <input type="text" name="lop" id="lop">
+                </fieldset>
+                <fieldset>
+                    <legend class="highlight">Thông tin khác</legend>
+                    <label for="ngaysinh" class="highlight">Ngày sinh</label>
+                    <input type="datetime" name="ngaysinh" id="ngaysinh"><br><br>
+                    <label for="tuoi" class="highlight">Tuổi</label>
+                    <input type="number" name="tuoi" id="tuoi">
+                </fieldset>
+                
+                <div class="Button">
+                    <button type="button" name="submit" onclick="checkSubmit()">Submit</button>
+                    <button type="button" name="reset">Reset</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script>
+        var highlightedElements = document.querySelectorAll('.highlight');
+
+        highlightedElements.forEach(function(element) {
+            element.addEventListener('mouseover', function() {
+            element.style.color = 'yellow';
+        });
+
+        element.addEventListener('mouseout', function() {
+            element.style.color = '';
+        });
+    });
+    </script>
+</body>
+</html>

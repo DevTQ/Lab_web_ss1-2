@@ -1,0 +1,259 @@
+.top {
+    #txt1 {
+        position: absolute;
+        font-size: 20px;
+        left: 90px;
+        color: white;
+    }
+
+    #icon1 {
+        position: absolute;
+        left: 370px;
+        top: 28px;
+    }
+
+    #txt2 {
+        position: absolute;
+        left: 400px;
+        top: 11px;
+        color: white;
+    }
+
+    #txt3 {
+        position: absolute;
+        left: 1100px;
+        top: 28px;
+        color: white;
+    }
+    
+    #icon3 {
+        position: absolute;
+        left: 1300px;
+        top: 28px;
+    }
+
+    #icon2 {
+        position: absolute;
+        left: 1070px;
+        top: 28px;
+    }
+}
+
+.middle {
+    #middle-txt1 {
+        position: absolute;
+        top: 75px;
+        left: 50px;
+        color: white;
+    }
+    #middle-icon1 {
+        position: absolute;
+        top: 76px;
+        left: 28px;
+        
+    }
+    #middle-txt2 {
+        position: absolute;
+        top: 115px;
+        left: 50px;
+        color: white;
+    }
+    #middle-icon2 {
+        position: absolute;
+        top: 116px;
+        left: 28px;
+        
+    }
+    #middle-icon3 {
+        position: absolute;
+        top: 116px;
+        left: 250px;
+        
+    }
+    #middle-txt3 {
+        position: absolute;
+        top: 155px;
+        left: 50px;
+        color: white;
+    }
+    #middle-icon4 {
+        position: absolute;
+        top: 156px;
+        left: 28px;
+        
+    }
+    #middle-icon5 {
+        position: absolute;
+        top: 156px;
+        left: 250px;
+    }
+    #middle-txt4 {
+        position: absolute;
+        top: 195px;
+        left: 50px; 
+        color: white;
+    }
+    #middle-icon6 {
+        position: absolute;
+        top: 196px;
+        left: 28px;
+    }
+    #middle-icon7 {
+        position: absolute;
+        top: 196px;
+        left: 250px;
+        
+    }
+    #middle-txt5 {
+        position: absolute;
+        top: 235px;
+        left: 50px;
+        color: white;
+    }
+    #middle-icon8 {
+        position: absolute;
+        top: 236px;
+        left: 28px;
+    }
+    #middle-icon9 {
+        position: absolute;
+        top: 236px;
+        left: 250px;
+        
+    }
+    #middle-txt6 {
+        position: absolute;
+        top: 275px;
+        left: 50px;
+        color: white;
+    }
+    #middle-icon10 {
+        position: absolute;
+        top: 276px;
+        left: 28px;
+    }
+    #middle-icon11 {
+        position: absolute;
+        top: 276px;
+        left: 250px;
+        
+    }
+    #middle-txt7 {
+        position: absolute;
+        top: 315px;
+        left: 50px;
+        color: white;
+    }
+    #middle-icon12 {
+        position: absolute;
+        top: 316px;
+        left: 28px;
+    }
+    #middle-icon13 {
+        position: absolute;
+        top: 356px;
+        left: 28px;
+    }
+    #middle-icon14 {
+        position: absolute;
+        top: 356px;
+        left: 250px;
+        
+    }
+    #middle-txt8 {
+        position: absolute;
+        top: 355px;
+        left: 50px;
+        color: white;
+    }
+
+    #middle-txt9 {
+        position: absolute;
+        font-size: 20px;
+        top: 55px;
+        left: 310px;
+    }
+
+    #middle-txt10 {
+        position: absolute;
+        font-size: 15px;
+        font-weight: bold;
+        top: 120px;
+        left: 420px;
+    }
+
+    #middle-icon15 {
+        position: absolute;
+        top: 162px;
+        left: 420px;
+    }
+
+    #middle-txt11 {
+        position: absolute;
+        top: 145px;
+        left: 440px;
+    }
+
+    #middle-icon16 {
+        position: absolute;
+        top: 186px;
+        left: 420px;
+    }
+
+    #middle-txt12 {
+        position: absolute;
+        top: 170px;
+        left: 440px;
+    }
+
+    #middle-txt13 {
+        position: absolute;
+        top: 145px;
+        left: 880px;
+    }
+
+    #middle-txt14 {
+        position: absolute;
+        top: 170px;
+        left: 880px;
+    }
+}
+
+.khoi1 {
+    position: absolute;
+    top: 225px;
+    left: 320px;
+    color: white;
+}
+.khoi2 {
+    position: absolute;
+    top: 225px;
+    left: 580px;
+    color: white;
+}
+.khoi3 {
+    position: absolute;
+    top: 225px;
+    left: 840px;
+    color: white;
+}
+.khoi4 {
+    position: absolute;
+    top: 225px;
+    left: 1080px;
+    color: white;
+}
+
+.under {
+    #under-txt1 {
+        position: absolute;
+        top: 350px;
+        left: 320px;
+    }
+
+    #under-txt2 {
+        position: absolute;
+        top: 350px;
+        left: 840px;
+    }
+}

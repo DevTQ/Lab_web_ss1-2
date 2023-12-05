@@ -1,0 +1,68 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: vh; /* 100% chiều cao của viewport */
+    margin: 0;
+}
+
+form {
+    background-color: #F0C2AD;
+    width: 700px;
+    height: 450px;
+}
+
+h2 {
+    size: 14px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+label {
+    width: 150px;
+    display: inline-block;
+}
+
+.Name {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.Address {
+    margin-bottom: 10px;
+}
+
+.Company {
+    margin-bottom: 10px;
+}
+
+.Email {
+    margin-bottom: 10px;
+}
+
+.Password {
+    margin-bottom: 10px;
+}
+
+.Confirm-Password {
+    margin-bottom: 10px;
+}
+
+.TelNumber {
+    margin-bottom: 10px;
+}
+
+.Age {
+    margin-bottom: 10px;
+}
+
+.radio {
+    margin-bottom: 10px;
+    position: relative;
+    left: 150px;
+}
+
+.button {
+    position: relative;
+    left: 150px;
+}

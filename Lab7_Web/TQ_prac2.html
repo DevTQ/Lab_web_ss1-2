@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="TQ_prac2.css">
+    <script src="TQ_prac2.js"></script>
+    <title>Prac2</title>
+</head>
+<body>
+    <form action="#" name="f" onSubmit="return check(event)">
+        <div class="head">
+            Subscription Form
+        </div>
+        <div class="middle">
+            <fieldset>
+                <legend>Personal Information</legend>
+            <br>
+            <label for="LastName">Last Name:</label>
+            <input type="text" id="LastName" name="LastName" placeholder="Ho Va" >
+            <label for="Name">First Name:</label>
+            <input type="text" id="FirstName" name="FirstName" placeholder="Ten">
+            <br><br>
+            <input type="radio" name="Male" id="Male">Male 
+            <input type="radio" name="Female" id="Female">Female
+            <br><br>
+            <label for="Address">Address:</label><br>
+            <textarea name="Address" id="Address" cols="30" rows="10" placeholder="Somewhere in Ninh Binh"></textarea>
+            </fieldset>
+            </div>
+            <div class="below">
+                <fieldset>
+                    <legend><label for="checkbox">Magazines subscription for</label></legend>
+                    <br>
+                    <input type="checkbox" name="Time" id="Time">Time
+                    <input type="checkbox" name="Newsweek" id="Newsweek">Newsweek
+                    <input type="checkbox" name="Sunday" id="Sunday">Sunday
+                    <input type="checkbox" name="Vogue" id="Vogue">Vogue
+                    <input type="checkbox" name="People" id="People">People
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend> <label for="year">Duration</label> <br></legend>
+                    <input type="radio" name="year" id="oneYear">1 Year
+                    <input type="radio" name="year" id="threeYear">3 Years
+                    <input type="radio" name="year" id="fiveYear">5 Years
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend><label for="Payment">Payment options</label><br></legend>
+                    <input type="radio" name="Payment" id="PaymentDraft">Demand Draft
+                    <input type="radio" name="Payment" id="PaymentCard">Credit Card
+                </fieldset>
+                <br>
+                <button type="button">Process</button>
+                <button id="btn">Reset</button>
+            </div>
+    </form>
+</body>
+</html>

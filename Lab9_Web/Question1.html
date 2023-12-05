@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admistrator</title>
+</head>
+<body>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+        }
+        table {
+            align-items: center;
+            width: 500px;
+            height: 200px;
+        }
+
+        th {
+            text-align: right;
+        }
+
+        input {
+            height: 30px;
+        }
+    </style>
+    <form action="#" name="f" id="myForm">
+        <table border="2px" cellspacing="5px" >
+            <div class="mainPP">
+                <tr>
+                    <td align="center" colspan="2"><h3>Admistrator</h3></td>
+                </tr>
+                <tr>
+                    <th>Email:</th>
+                    <td><input type="text" name="email" id="email">(*) <br> (example:home@aptech.vn)</td>
+                </tr>
+                <tr>
+                    <th>Password:</th>
+                    <td><input type="password" name="password" id="password">(*)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="Submit" onclick="checkSubmit()">&ensp; <input type="button" value="Reset" onclick="checkReset()"></td>
+                </tr>
+            </div>
+        </table>
+    </form>
+
+    <script>
+        function checkReset() {
+            var resetForm = document.getElementById('myForm');
+            resetForm.reset();
+        }
+ 
+        function checkSubmit() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            if(email == '') {
+                alert('Email can not be empty!');
+                return false;
+            }
+
+            var regexEmail = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+            if(!regexEmail.test(email)) {
+                alert('Email can not be format!');
+                return false;
+            }
+
+            if(password == '') {
+                alert('Password can not be empty!');
+                return false;
+            }
+
+            var regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[1-9])(?=.*[~@#$?]).+$/
+            if(!regexPassword.test(password)) {
+                alert('Password can not be format!');
+                return false;
+            }
+            alert('Done!');
+        }
+    </script>
+</body>
+</html>

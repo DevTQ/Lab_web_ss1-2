@@ -1,0 +1,127 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Tiêu đề trang web</title>
+		<script>
+			function changecolor(color,id){
+				id.style.backgroundColor = color;
+			}
+			function check(){
+				if (f.txtHoVaTen.value==""){
+					alert("Phải nhập vào Họ và Tên!");
+					f.txtHoVaTen.focus();
+					return false; 
+				}
+				if (f.txtMatKhau.value==""){
+					alert("Phải nhập vào Mật Khẩu!");
+					f.txtMatKhau.focus();
+					return false; 
+				}
+				if (f.txtDiaChi.value==""){
+					alert("Phải nhập vào Địa Chỉ!");
+					f.txtDiaChi.focus();
+					return false; 
+				}
+				if (f.txtDienThoai.value==""){
+					alert("Phải nhập vào Điện Thoại!");
+					f.txtDienThoai.focus();
+					return false; 
+				}
+				if (f.txtEmail.value==""){
+					alert("Phải nhập vào Email!");
+					f.txtEmail.focus();
+					return false; 
+				}
+				
+				return true;
+			}
+		</script>
+	</head>
+	<body>
+		<h1 align=center>Đăng ký thông tin</h1>
+		<form method="GET" action="session07_04.html" name=f onSubmit="return check()"
+			enctype="multipart/form-data">
+			<table border=0 cellspacing=5 align=center>
+				<tr>
+					<td align=right>Họ và tên:</td>
+					<td><input type=text name=txtHoVaTen size=30
+							onFocus="changecolor('yellow',this);"
+							onBlur="changecolor('white',this);"
+							onKeyUp="changecolor('white',this);"
+					></td>
+				</tr>
+				<tr>
+					<td align=right>Mật khẩu:</td>
+					<td><input onFocus="changecolor('yellow',this);"
+							onBlur="changecolor('white',this);"
+							onKeyUp="changecolor('white',this);" type=password name=txtMatKhau size=30></td>
+				</tr>
+				<tr>
+					<td align=right>Địa chỉ:</td>
+					<td><input onFocus="changecolor('yellow',this);"
+							onBlur="changecolor('white',this);"
+							onKeyUp="changecolor('white',this);" type=text name=txtDiaChi size=30></td>
+				</tr>
+				<tr>
+					<td align=right>Điện thoại:</td>
+					<td><input onFocus="changecolor('yellow',this);"
+							onBlur="changecolor('white',this);"
+							onKeyUp="changecolor('white',this);" type=text name=txtDienThoai size=30></td>
+				</tr>
+				<tr>
+					<td align=right>Email:</td>
+					<td><input onFocus="changecolor('yellow',this);"
+							onBlur="changecolor('white',this);"
+							onKeyUp="changecolor('white',this);" type=text name=txtEmail size=30></td>
+				</tr>
+				<tr>
+					<td align=right>Giới tính:</td>
+					<td>
+						<input type=radio name=rdGioiTinh value=1>Nam 
+						<input type=radio checked name=rdGioiTinh value=0>Nữ
+						<input type=radio name=rdGioiTinh value=-1>Khác
+					</td>
+				</tr>
+				<tr>
+					<td align=right>Sở thích:</td>
+					<td><input type=checkbox name=ckSoThich value="Âm nhạc">Âm nhạc
+						<input type=checkbox name=ckSoThich value="Thể thao">Thể thao
+						<input type=checkbox name=ckSoThich value="Nghiên cứu">Nghiên cứu 
+						<input type=checkbox name=ckSoThich value="Tiền">Tiền
+						<input type=checkbox name=ckSoThich value="Mua sắm">Mua sắm
+						</td> 
+				</tr>
+				<tr>
+					<td align=right>Ảnh:</td>
+					<td><input type=file name=fAnh></td>
+				</tr>
+				<tr>
+					<td align=right valign=top>Giới thiệu bản thân:</td>
+					<td><textarea onFocus="changecolor('yellow',this);"
+							onBlur="changecolor('white',this);"
+							onKeyUp="changecolor('white',this);" name=taGioiThieu cols=30 rows=10>Nhập vào đây</textarea></td>
+				</tr>
+				<tr>
+					<td align=right>Ngôn ngữ:</td>
+					<td>
+						<select name="slNgonNgu">
+							<option value="vn">Tiếng Việt</option>
+							<option value="cn">Tiếng Tàu</option>
+							<option selected value="uk">Tiếng Anh</option>
+							<option value="fr">Tiếng Pháp</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td align=right><input type=submit name="cmdGuiDi" value="Gửi đi"></td>
+					<td>
+						<input type=image src="images/timkiem.png">
+						<input type=reset value="Làm lại">
+						<input type=button name="cmdAdd" value="Thêm mới">
+						<input type=hidden name="cmdHidden" value="EWTWWEWETT">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
